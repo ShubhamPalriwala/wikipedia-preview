@@ -1,11 +1,50 @@
 {
     "baseUrl": "http://localhost:8080",
     "env":{
+        "deviceSizes":[ "macbook-15", "iphone-x" ],
         "en":{
             "header":"Wikipedia Preview demo",
             "title":"Wildlife of the Central African Republic",
             "footer":"This article uses material from the Wikipedia article “Wildlife of the Central African Republic”,which is released under the Creative Commons Attribution-Share-Alike License 3.0. View Source",
             "footerInURL":"https://en.m.wikipedia.org/wiki/Wildlife_of_the_Central_African_Republic"
-        }
+        },
+        "index":[
+            {
+                "title":"Wildlife of the Central African Republic",
+                "subtitle":"Language · English",
+                "content":"Wildlife in the Central African Republic is in the vast natu..."
+            },
+            {
+                "title":"Gili Trawangan",
+                "subtitle":"Language · Bahasa Indonesia",
+                "content":"Gili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat…"
+            },
+            {
+                "title":"विस्तार से जानिये कालिंजर दुर्ग के बारे में",
+                "subtitle":"Language · Hindi",
+                "content":"कालिंजर दुर्ग, भारतीय राज्य उत्तर प्रदेश के बांदा जिले में स्थित एक दुर्ग है। बुन्देल…"
+            },
+            {
+                "title":"เฉลิมชัย โฆษิตพิพัฒน์",
+                "subtitle":"Language · Thai",
+                "content":"เฉลิมชัย โฆษิตพิพัฒน์ เป็นจิตรกรไทยมีผลงานจิตรกรรมไทยหลายผลงาน เช่น ภาพจิตรกรรมไทยในอุโบสถวัดพุทธประทีป"
+            },
+            {
+                "title":"Nikola Tesla",
+                "subtitle":"Language · Spanish",
+                "content":"Nikola Tesla fue un inventor, ingeniero eléctrico, ingeniero m…"
+            },
+            {
+                "title":" Conseil de sécurité des Nations unies",
+                "subtitle":"Language · French",
+                "content":"Le Conseil de sécurité des Nations unies est l'organe exécutif de …"
+            },
+            {
+                "title":"أم كلثوم (مطربة)",
+                "subtitle":"Language · Arabic",
+                "content":"فاطمة بنت الشيخ المؤذن إبراهيم السيد البلتاجي وتعرف أيضاً بكُنيتها المشهورة أُم كَلثوم هي مغنية وممثلة مصرية..."
+            }
+
+        ]
     }
 }

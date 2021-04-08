@@ -2,7 +2,7 @@
 
 import english from '../../../i18n/en.json'
 
-const deviceSizes = [ 'macbook-15', 'iphone-x' ],
+const deviceSizes = Cypress.env( 'deviceSizes' ),
 	languageData = Cypress.env( 'en' )
 
 deviceSizes.forEach( screenSize => {
