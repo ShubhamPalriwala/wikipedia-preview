@@ -56,12 +56,12 @@ Cypress.Commands.add( 'validateFooter', ( footerText, fontSize ) => {
 	cy.get( '.footer ' ).should( 'be.visible' ).contains( footerText ).should( 'have.css', 'font-size', fontSize + 'px' )
 } )
 
-Cypress.Commands.add( 'validateHeader', ( headerText, fontSize ) => {
+Cypress.Commands.add( 'validateHeader', ( fontSize ) => {
 	/*
 		Check if the header of the page is visible and matches the one provided in cypress.json.
 		It also checks the CSS and font size as it is on the webpage.
 	*/
-	cy.get( '.header' ).should( 'be.visible' ).and( 'have.text', headerText ).and( 'have.css', 'font-size', fontSize + 'px' )
+	cy.get( '.header' ).should( 'be.visible' ).and( 'have.text', 'Wikipedia Preview demo' ).and( 'have.css', 'font-size', fontSize + 'px' )
 
 	// Check if first 'a' link tag i.e the header link redirects the user to ../index.html.
 	cy.get( 'a' ).first().should( 'have.attr', 'href', '../index.html' )
@@ -106,31 +106,31 @@ Cypress.Commands.add( 'validatesWikipediaPreviews', ( continueReading, readMoreO
 
 	describe( 'Checks Each Popup one by one', () => {
 		// This selects 1 hyperlink at a time
-		cy.get( '.wmf-wp-with-preview' ).each( ( _ele, index ) => {
-			index++
+		cy.get( '.wmf-wp-with-preview' ).each( ( ele ) => {
+
 			// This clicks on the hyperlink and checks if the popup is visible or not.
-			cy.wikipediaPreviewAtPosition( index )
+			cy.get( ele )
 				.click()
 				.should( 'be.visible' )
 
 			// Checks if the header image of the wikipedia preview is visible or not.
-			cy.get( '.wikipediapreview-header-image' ).click().should( 'be.visible' )
+			cy.get( '.wikipediapreview-header-image' ).should( 'be.visible' )
 
 			/* This verifies that the "continue reading" text is same as the one mentioned
 			 in i18n english file and then we click on the "read more" button */
-			cy.wikipediaReadMore().contains( continueReading ).click().as( 'readMore' ).wait( 100 )
+			cy.wikipediaReadMore().contains( continueReading ).should( 'be.visible' ).click().as( 'readMore' ).wait( 100 )
 
 			// Checks if the image row at the bottom of the wikipedia preview is visible or not.
-			cy.get( '.wikipediapreview-gallery-row' ).should( 'be.visible' )
+			cy.get( '.wikipediapreview-gallery-row' ).scrollIntoView().should( 'be.visible' )
 
 			/* This clicks on the hyperlink and checks if the popup expands after we clicked in the
 			 previous step ad checks the "read-more" from the i18n json english file */
-			cy.wikipediaReadOnWiki()
+			cy.wikipediaReadOnWiki().scrollIntoView()
 				.should( 'be.visible' )
 				.contains( readMoreOnWiki )
 
 			// This closes this popup so we can move to the next popup in the loop.
-			cy.wikipediaCloseBtn().click()
+			cy.wikipediaCloseBtn().scrollIntoView().click()
 		} )
 	} )
 } )
@@ -138,11 +138,6 @@ Cypress.Commands.add( 'validatesWikipediaPreviews', ( continueReading, readMoreO
 Cypress.Commands.add( 'wikipediaCloseBtn', () => {
 	// Selects the wikipedia close button on the webpage.
 	cy.get( '.wikipediapreview-header-closebtn' )
-} )
-
-Cypress.Commands.add( 'wikipediaPreviewAtPosition', ( index ) => {
-	// Selects the wikipedia preview present at the index position.
-	cy.get( ':nth-child(' + index + ') > .wmf-wp-with-preview' )
 } )
 
 Cypress.Commands.add( 'wikipediaReadMore', () => {

@@ -1,20 +1,20 @@
 /* eslint-disable no-undef */
 
-import english from '../../../i18n/en.json'
+import hindi from '../../../i18n/hi.json'
 
 const deviceSizes = Cypress.env( 'deviceSizes' ),
-	languageData = Cypress.env( 'en' )
+	languageData = Cypress.env( 'hi' )
 
 deviceSizes.forEach( screenSize => {
-	describe( 'Validates the English Homepage for ' + screenSize + ' View', () => {
+	describe( 'Validates the Hindi Homepage for ' + screenSize + ' View', () => {
 		beforeEach( () => {
 			cy.viewport( screenSize )
 		} )
 
-		it( 'Validates the "english" in the URL', () => {
-			cy.visit( '/articles/english.html' )
+		it( 'Validates the "hindi" in the URL', () => {
+			cy.visit( '/articles/hindi.html' )
 
-			cy.validateUrl( 'english' )
+			cy.validateUrl( 'hindi' )
 		} )
 
 		it( 'Validates the Header of the page', () => {
@@ -44,10 +44,12 @@ deviceSizes.forEach( screenSize => {
 		} )
 
 		it( 'Validates the Wikipedia Previews across the page', () => {
-			cy.validatesWikipediaPreviews( english[ 'continue-reading' ], english[ 'read-more' ] )
+
+			cy.validatesWikipediaPreviews( hindi[ 'continue-reading' ], hindi[ 'read-more' ] )
 		} )
 
 		it( 'Validates Footer of the page', () => {
+
 			cy.validateFooter( languageData.footer, '12' )
 		} )
 		it( 'Validates URL in Footer', () => {
