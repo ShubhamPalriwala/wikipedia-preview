@@ -44,3 +44,21 @@ workflows:
           wait-on: http://0.0.0.0:8080
           command: npm run cypress:run
           group: firefox
+      - cypress/run:
+          name: Cypress tests on Chrome
+          requires:
+            - cypress/install 
+          browser: chrome
+          start: npm run dev
+          wait-on: http://0.0.0.0:8080
+          command: npm run cypress:run
+          group: chrome
+      - cypress/run:
+          name: Cypress tests on Electron
+          requires:
+            - cypress/install 
+          browser: electron
+          start: npm run dev
+          wait-on: http://0.0.0.0:8080
+          command: npm run cypress:run
+          group: electron
