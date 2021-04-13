@@ -1,0 +1,65 @@
+{
+    "baseUrl": "http://localhost:8080",
+    "env":{
+        "deviceSizes":[ "macbook-15", "iphone-x" ],
+        "en":{
+            "header":"Wikipedia Preview demo",
+            "title":"Wildlife of the Central African Republic",
+            "footer":"This article uses material from the Wikipedia article “Wildlife of the Central African Republic”,which is released under the Creative Commons Attribution-Share-Alike License 3.0. View Source",
+            "footerInURL":"https://en.m.wikipedia.org/wiki/Wildlife_of_the_Central_African_Republic"
+        },
+        "hi":{
+            "title":"विस्तार से जानिये कालिंजर दुर्ग के बारे में",
+            "footer":"This article uses material from the Wikipedia article",
+            "footerInURL":"https://hi.m.wikipedia.org/wiki/%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%9C%E0%A4%B0_%E0%A4%A6%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%97"
+        },
+        "th":{
+            "title":"เฉลิมชัย โฆษิตพิพัฒน์",
+            "footer":"This article uses material from the Wikipedia article",
+            "footerInURL":"https://th.m.wikipedia.org/wiki/%E0%B9%80%E0%B8%89%E0%B8%A5%E0%B8%B4%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B8%A2_%E0%B9%82%E0%B8%86%E0%B8%A9%E0%B8%B4%E0%B8%95%E0%B8%9E%E0%B8%B4%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B9%8C"
+        },
+        "ar":{
+            "title":"أم كلثوم (مطربة)",
+            "footer":"This article uses material from the Wikipedia article",
+            "footerInURL":"https://ar.m.wikipedia.org/wiki/%D8%A3%D9%85_%D9%83%D9%84%D8%AB%D9%88%D9%85_(%D9%85%D8%B7%D8%B1%D8%A8%D8%A9)"
+        },
+        "index":[
+            {
+                "title":"Wildlife of the Central African Republic",
+                "subtitle":"Language · English",
+                "content":"Wildlife in the Central African Republic is in the vast natu..."
+            },
+            {
+                "title":"Gili Trawangan",
+                "subtitle":"Language · Bahasa Indonesia",
+                "content":"Gili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat…"
+            },
+            {
+                "title":"विस्तार से जानिये कालिंजर दुर्ग के बारे में",
+                "subtitle":"Language · Hindi",
+                "content":"कालिंजर दुर्ग, भारतीय राज्य उत्तर प्रदेश के बांदा जिले में स्थित एक दुर्ग है। बुन्देल…"
+            },
+            {
+                "title":"เฉลิมชัย โฆษิตพิพัฒน์",
+                "subtitle":"Language · Thai",
+                "content":"เฉลิมชัย โฆษิตพิพัฒน์ เป็นจิตรกรไทยมีผลงานจิตรกรรมไทยหลายผลงาน เช่น ภาพจิตรกรรมไทยในอุโบสถวัดพุทธประทีป"
+            },
+            {
+                "title":"Nikola Tesla",
+                "subtitle":"Language · Spanish",
+                "content":"Nikola Tesla fue un inventor, ingeniero eléctrico, ingeniero m…"
+            },
+            {
+                "title":" Conseil de sécurité des Nations unies",
+                "subtitle":"Language · French",
+                "content":"Le Conseil de sécurité des Nations unies est l'organe exécutif de …"
+            },
+            {
+                "title":"أم كلثوم (مطربة)",
+                "subtitle":"Language · Arabic",
+                "content":"فاطمة بنت الشيخ المؤذن إبراهيم السيد البلتاجي وتعرف أيضاً بكُنيتها المشهورة أُم كَلثوم هي مغنية وممثلة مصرية..."
+            }
+
+        ]
+    }
+}
